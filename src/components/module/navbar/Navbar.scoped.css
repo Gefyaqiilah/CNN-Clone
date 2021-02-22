@@ -47,12 +47,16 @@ border:2px solid white;
 border-radius: 50%;
 }
 
-* {
-  /* border:1px solid yellow; */
-}
+/* * {
+  border:1px solid yellow;
+} */
 .search-wrapper {
   background-color:#272727;
 }
+.dropdown-profile.nav-item .dropdown-menu{ display: none; }
+.dropdown-profile.nav-item:hover .nav-link{ color: #fff;  }
+.dropdown-profile.nav-item:hover .dropdown-menu{ display: block; }
+.dropdown-profile.nav-item .dropdown-menu{ margin-top:0; }
 .search-input {
   width:95%;
   height:100%;

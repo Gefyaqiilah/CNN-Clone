@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import './Navbar.scoped.css'
 
-import { Container, DropdownButton,Dropdown } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import logo from '../../../assets/logo.png'
 import defaultUserImage from '../../../assets/default-user-img.jpg'
@@ -58,10 +57,14 @@ function Navbar () {
           <div className="nav-item">
            <i class="fa fa-search text-white" onClick={()=>setShowSearch(true)}  aria-hidden="true"></i>
           </div>
-          <div className="nav-item">
+          <div className="nav-item dropdown-profile dropdown">
             <div className="img p-0">
-              <img src={defaultUserImage} alt=""/>
+              <img src={defaultUserImage} alt="imageuser" class="dropdown-toggle" href="#" data-toggle="dropdown"/>
             </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+	          </ul>
           </div>
           </div>}
           {showSearch && <div className="container-fluid search-wrapper d-flex flex-row justify-content-center h-100 p-3 m-0">
