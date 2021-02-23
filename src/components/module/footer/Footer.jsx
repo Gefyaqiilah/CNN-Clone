@@ -13,12 +13,12 @@ function Footer ()  {
       </div>
       <div className="footer-middle">
         <div className="left">
-          <p className="text-gray weight-r">Menyajikan berita terhangat langsung melalui handphone Anda</p>
+          <p className="text-gray bold-400 text-15">Menyajikan berita terhangat langsung melalui handphone Anda</p>
           <p className="text-gray">DOWNLOAD SEKARANG</p>
         </div>
         <div className="middle">
           <div className="header"></div>
-          <p className="text-gray">TELUSURI</p>
+          <p className="text-gray bold-600 m-0 p-0">TELUSURI</p>
           <div className="nav-menu d-flex flex-wrap p-0">
             <p>Nasional</p>
             <p>Internasional</p>
@@ -28,11 +28,11 @@ function Footer ()  {
             <p>Hiburan</p>
             <p>Gaya Hidup</p>
           </div>
-          <button>CNN TV</button>
+          <button type="button" className="btn-outline-red"><i className="fas fa-circle text-8 text-red"></i> CNN TV</button>
         </div>
         <div className="right">
           <div className="header">
-            <p className="text-gray">IKUTI KAMI</p>
+            <p className="text-gray bold-600">IKUTI KAMI</p>
             <div className="social-media d-flex flex-row">
               <div className="facebook">
                 <i className="fab fa-facebook-f text-white" aria-hidden="true"></i>

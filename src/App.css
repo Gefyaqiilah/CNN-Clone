@@ -7,6 +7,9 @@
 .text-dark-gray {
   color:#272727 !important;
 }
+.text-red {
+  color:#CC0000 !important;
+}
 .td-none {
   text-decoration:none !important;
 }
@@ -16,9 +19,29 @@
 .text-13 {
   font-size:14px !important;
 }
+.text-15 {
+  font-size:16px !important;
+}
+.text-8 {
+  font-size:8px !important;
+}
 .weight-r {
   font-weight:300;
 }
 .text-light-gray {
   color:#8D8D8D;
+}
+.btn-outline-red {
+  background:transparent !important;
+  color:#DBDBDB;
+  border:1px solid #CC0000;
+}
+.bold-300 {
+  font-weight:300 !important;
+}
+.bold-400 {
+  font-weight:400 !important;
+}
+.bold-600 {
+  font-weight:600 !important;
 }
