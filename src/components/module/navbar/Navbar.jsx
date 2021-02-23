@@ -6,6 +6,7 @@ import logo from '../../../assets/logo.png'
 import defaultUserImage from '../../../assets/default-user-img.jpg'
 function Navbar () {
   const [showSearch, setShowSearch] = useState(false)
+  
   return (
       <nav className="navbar navbar-dark navbar-expand-lg">
         <div className="container">

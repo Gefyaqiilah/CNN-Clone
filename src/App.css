@@ -13,3 +13,12 @@
 .text-20 {
   font-size:20px;
 }
+.text-13 {
+  font-size:14px !important;
+}
+.weight-r {
+  font-weight:300;
+}
+.text-light-gray {
+  color:#8D8D8D;
+}

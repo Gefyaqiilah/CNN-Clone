@@ -5,7 +5,7 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import News from '../pages/News'
 import Navbar from '../components/module/navbar/Navbar'
-// import Footer from '../components/module/footer/Footer'
+import Footer from '../components/module/footer/Footer'
 export default function Routes () {
   return (
     <Router>
@@ -14,7 +14,7 @@ export default function Routes () {
         <Route exact component={Home}/>
         <Route exact component={News}/>
       </Switch>
-      {/* <Footer/> */}
+      <Footer/>
     </Router>
   )
 }
