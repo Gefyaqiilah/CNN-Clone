@@ -1,0 +1,34 @@
+.news-header {
+  display:grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 420px;
+  grid-template-areas: 
+  "headline news-update";
+  border: 1px solid red;
+}
+.news-header .headline {
+  border:5px solid orange;
+  grid-area:headline;
+}
+.news-header .news-update {
+  border:5px solid pink;
+  grid-area:news-update;
+}
+.news-header .headline .img img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.news-header .headline .img {
+  width:100%;
+  height:100%;
+}
+.news-header .headline .details {
+  background:#FFFFFF;
+  position:relative;
+  bottom:60px;
+  height:84px;
+  box-shadow:rgba(0, 0, 0, 0.25) 0px 0px 5px 0px;
+  padding:15px 20px 15px 20px;
+  margin:0 25px 0 25px !important;
+}
