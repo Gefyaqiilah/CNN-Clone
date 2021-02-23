@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-import {useSelector} from 'react-redux'
-
+import React from 'react'
+import './Home.scoped.css'
+import NewsHeader from '../../base/news-header/NewsHeader'
 function Home () {
   
   return (
-    <div>
-      <h1>ini home</h1>
+    <div className="container home-container pt-5">
+      <NewsHeader/>
     </div>
   )
 }

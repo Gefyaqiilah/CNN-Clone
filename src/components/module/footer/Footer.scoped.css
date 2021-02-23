@@ -1,9 +1,9 @@
 footer {
   background:#272727;
   width:100%;
-  position: absolute;
+  position: relative;
   height:max-content;
-  bottom:0;
+  bottom:0 !important;
 }
 footer .footer-top {
   border-bottom:1px solid  #414141;

@@ -8,6 +8,7 @@ function Navbar () {
   const [showSearch, setShowSearch] = useState(false)
   
   return (
+    <div className="container-fluid p-0 sticky-top index-top">
       <nav className="navbar navbar-dark navbar-expand-lg">
         <div className="container">
         <Link to="/" className="navbar-brand">
@@ -78,6 +79,7 @@ function Navbar () {
         </div>
         </div>
       </nav>
+    </div>
   )
 }
 

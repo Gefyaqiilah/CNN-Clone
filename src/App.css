@@ -5,7 +5,7 @@
   color:#DBDBDB !important;
 }
 .text-dark-gray {
-  color:#272727 !important;
+  color:#444444 !important;
 }
 .text-red {
   color:#CC0000 !important;
@@ -16,8 +16,14 @@
 .text-20 {
   font-size:20px;
 }
+.text-23 {
+  font-size:23px;
+}
 .text-13 {
   font-size:14px !important;
+}
+.text-12 {
+  font-size:12px !important;
 }
 .text-15 {
   font-size:16px !important;
@@ -44,4 +50,10 @@
 }
 .bold-600 {
   font-weight:600 !important;
+}
+.bold-700 {
+  font-weight:700 !important;
+}
+.index-top {
+  z-index: 1;
 }
