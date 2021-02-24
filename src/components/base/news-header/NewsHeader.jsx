@@ -1,6 +1,9 @@
 import './NewsHeader.scoped.css'
 import imgHeadline from '../../../assets/example-headline.jpeg'
-
+import imgNews1 from '../../../assets/news-update1.jpeg'
+import imgNews2 from '../../../assets/news-update2.jpeg'
+import imgNews3 from '../../../assets/news-update3.jpeg'
+import imgNews4 from '../../../assets/news-update4.jpeg'
 function NewsHeader () {
   return (
     <div className="news-header">
@@ -15,7 +18,53 @@ function NewsHeader () {
           </div>
         </div>
       </div>
-      <div className="news-update"></div>
+      <div className="news-update d-flex flex-column p-0">
+        <div className="news-item p-0 d-flex">
+          <div className="img">
+            <img src={imgNews1} alt=""/>
+          </div>
+          <div className="details">
+            <p className="m-0 title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, soluta?</p>
+            <p className="m-0 text-12"><span className="text-red bold-700">Nasional</span> <span>5 Menit yang lalu</span></p>
+          </div>
+        </div>
+        <div className="news-item p-0 d-flex">
+          <div className="img">
+            <img src={imgNews1} alt=""/>
+          </div>
+          <div className="details">
+            <p className="m-0 title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, soluta?</p>
+            <p className="m-0 text-12"><span className="text-red bold-700">Nasional</span> <span>5 Menit yang lalu</span></p>
+          </div>
+        </div>
+        <div className="news-item p-0 d-flex">
+          <div className="img">
+            <img src={imgNews1} alt=""/>
+          </div>
+          <div className="details">
+            <p className="m-0 title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, soluta?</p>
+            <p className="m-0 text-12"><span className="text-red bold-700">Nasional</span> <span>5 Menit yang lalu</span></p>
+          </div>
+        </div>
+        <div className="news-item p-0 d-flex">
+          <div className="img">
+            <img src={imgNews1} alt=""/>
+          </div>
+          <div className="details">
+            <p className="m-0 title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, soluta?</p>
+            <p className="m-0 text-12"><span className="text-red bold-700">Nasional</span> <span>5 Menit yang lalu</span></p>
+          </div>
+        </div>
+        <div className="news-item p-0 d-flex">
+          <div className="img">
+            <img src={imgNews1} alt=""/>
+          </div>
+          <div className="details">
+            <p className="m-0 title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, soluta?</p>
+            <p className="m-0 text-12"><span className="text-red bold-700">Nasional</span> <span>5 Menit yang lalu</span></p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

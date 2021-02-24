@@ -2,3 +2,9 @@
   position:relative;
   min-height:100vh !important;
 }
+.home-container div {
+  margin: 0 0 100px 0 !important;
+}
+.gap-component {
+  margin: 0 0 100px 0 !important;
+}
