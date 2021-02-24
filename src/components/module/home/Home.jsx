@@ -15,6 +15,7 @@ function Home () {
       </div>
       <div id="main-content row">
         <div className="main-left col-lg-8">
+          
         </div>
         <div className="main-right col-lg-4"></div>
       </div>
