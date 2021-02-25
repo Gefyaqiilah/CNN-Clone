@@ -5,3 +5,6 @@
 .gap-component {
   margin: 0 0 100px 0 !important;
 }
+.gap-component-content {
+  margin: 0 0 30px 0 !important;
+}
