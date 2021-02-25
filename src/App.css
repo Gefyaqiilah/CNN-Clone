@@ -28,8 +28,17 @@
 .text-15 {
   font-size:16px !important;
 }
+.text-17 {
+  font-size:17px !important;
+}
 .text-8 {
   font-size:8px !important;
+}
+.text-25 {
+  font-size:25px !important;
+}
+.text-40 {
+  font-size:40px !important;
 }
 .weight-r {
   font-weight:300;
@@ -56,4 +65,8 @@
 }
 .index-top {
   z-index: 1;
+}
+.border-b-red {
+  border-bottom:2px solid red !important;
+  width:max-content;
 }
