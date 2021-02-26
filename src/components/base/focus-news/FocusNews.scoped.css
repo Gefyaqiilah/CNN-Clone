@@ -1,0 +1,32 @@
+.focus-news {
+  height:300px;
+}
+.news-item {
+  height:130px;
+  background:red !important;
+}
+.news-item .img {
+  width:100%;
+  height:100%;
+}
+.news-item .img img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.news-item .news-title {
+  position:relative;
+  bottom:40px;
+
+  width:90%;
+  margin:0 auto;
+  background:#CC0000;
+  text-align:center;
+  color:white;
+}
+.news-item .news-title p {
+  height:40px;
+}
+.list-news .news-item {
+  margin:0 0 25px 0;
+}
