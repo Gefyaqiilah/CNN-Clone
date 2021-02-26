@@ -4,6 +4,8 @@ import NewsHeader from '../../base/news-header/NewsHeader'
 import HeadLines from '../../base/headlines/HeadLines'
 import NewsCovid from '../../base/news-covid/NewsCovid'
 import LaporanInteraktif from '../../base/news-update/NewsUpdate'
+import ListNewsUpdate from '../../base/list-news-update/ListNewsUpdate'
+
 function Home () {
   
   return (
@@ -21,6 +23,9 @@ function Home () {
           </div>
           <div className="gap-component-content">
            <LaporanInteraktif/> 
+          </div>
+          <div className="gap-component-content">
+            <ListNewsUpdate/>
           </div>
         </div>
         <div className="main-right col-lg-4">

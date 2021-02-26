@@ -1,0 +1,15 @@
+.list-news-update {
+  height:max-content;
+}
+.news-update .img {
+  width:100%;
+  height:100%;
+}
+.news-update .img img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+.title-component .line{
+  background:blue;
+}
