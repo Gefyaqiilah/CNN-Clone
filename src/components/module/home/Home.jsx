@@ -6,6 +6,7 @@ import NewsCovid from '../../base/news-covid/NewsCovid'
 import LaporanInteraktif from '../../base/news-update/NewsUpdate'
 import ListNewsUpdate from '../../base/list-news-update/ListNewsUpdate'
 import FocusNews from '../../base/focus-news/FocusNews'
+import NewsReviews from '../../base/news-reviews/NewsReviews'
 
 function Home () {
   
@@ -30,8 +31,11 @@ function Home () {
           </div>
         </div>
         <div className="main-right col-lg-4 p-3">
-          <div className="gap-component-content">
+          <div className="gap-component-content-right">
             <FocusNews/>
+          </div>
+          <div className="gap-component-content-right">
+            <NewsReviews/>
           </div>
         </div>
       </div>
