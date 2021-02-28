@@ -10,7 +10,6 @@ import NewsReviews from '../../base/news-reviews/NewsReviews'
 import AllPopularNews from '../../base/all-popular-news/AllPopularNews'
 
 function Home () {
-  
   return (
     <div className="container home-container pt-5">
       <div className="gap-component">
