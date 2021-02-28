@@ -8,6 +8,7 @@ import ListNewsUpdate from '../../base/list-news-update/ListNewsUpdate'
 import FocusNews from '../../base/focus-news/FocusNews'
 import NewsReviews from '../../base/news-reviews/NewsReviews'
 import AllPopularNews from '../../base/all-popular-news/AllPopularNews'
+import ImageGallery from '../../base/image-gallery/ImageGallery'
 
 function Home () {
   return (
@@ -28,6 +29,9 @@ function Home () {
           </div>
           <div className="gap-component-content">
             <ListNewsUpdate/>
+          </div>
+          <div className="gap-component-content">
+            <ImageGallery/>
           </div>
         </div>
         <div className="main-right col-lg-4 p-3">
