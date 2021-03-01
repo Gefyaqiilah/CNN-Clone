@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './Home.scoped.css'
 import NewsHeader from '../../base/news-header/NewsHeader'
 import HeadLines from '../../base/headlines/HeadLines'
@@ -10,6 +10,22 @@ import NewsReviews from '../../base/news-reviews/NewsReviews'
 import AllPopularNews from '../../base/all-popular-news/AllPopularNews'
 
 function Home () {
+
+  const [newsUpdateTitle, setNewsUpdateTitle] = useState("")
+  const [newsUpdateBackground, setNewsUpdateBackground] = useState("")
+  const [newsUpdateTitleColor, setNewsUpdateTitleColor] = useState("")
+  const [newsUpdateSubTitleColor, setNewsUpdateSubTitleColor] = useState("")
+
+  const change = () => {
+    setNewsUpdateTitle("BERITA DAERAH TERBARU")
+    setNewsUpdateBackground("#F2F4F5")
+    setNewsUpdateTitleColor("#444444")
+    setNewsUpdateSubTitleColor("#CC0000")
+  }
+
+  useEffect(() => {
+    change()
+  }, [])
   
   return (
     <div className="container home-container pt-5">
@@ -25,7 +41,7 @@ function Home () {
             <NewsCovid/> 
           </div>
           <div className="gap-component-content">
-           <LaporanInteraktif/> 
+           <LaporanInteraktif title={newsUpdateTitle} background={newsUpdateBackground} titleColor={newsUpdateTitleColor} subTitleColor={newsUpdateSubTitleColor} /> 
           </div>
           <div className="gap-component-content">
             <ListNewsUpdate/>
