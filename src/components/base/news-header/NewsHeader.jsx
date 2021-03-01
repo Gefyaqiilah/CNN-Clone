@@ -1,9 +1,6 @@
 import './NewsHeader.scoped.css'
 import imgHeadline from '../../../assets/example-headline.jpeg'
 import imgNews1 from '../../../assets/news-update1.jpeg'
-import imgNews2 from '../../../assets/news-update2.jpeg'
-import imgNews3 from '../../../assets/news-update3.jpeg'
-import imgNews4 from '../../../assets/news-update4.jpeg'
 function NewsHeader () {
   return (
     <div className="news-header">

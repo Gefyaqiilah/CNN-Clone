@@ -23,7 +23,7 @@ function Navbar () {
               <Link to="" className="text-gray th-red td-none">Home</Link>
             </div>
             <div className="nav-item">
-              <Link to="" className="text-gray th-red td-none">Nasional</Link>
+              <Link to="/news/nasional" className="text-gray th-red td-none">Nasional</Link>
             </div>
             <div className="nav-item">
               <Link to="" className="text-gray th-red td-none">Internasional</Link>
@@ -46,26 +46,26 @@ function Navbar () {
           </div>}
           {!showSearch && <div className="navbar-nav">  
           <div className="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-gray th-red td-none p-0" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          <h6 className="nav-link dropdown-toggle text-gray th-red td-none p-0" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
           LAINNYA
-        </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"/></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </h6>
+            <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><Link to="" className="dropdown-item">Action</Link></li>
+              <li><Link to="" className="dropdown-item">Another action</Link></li>
+              <li><hr className="dropdown-divider"/></li>
+              <li><Link to="" className="dropdown-item">Something else here</Link></li>
             </ul>
           </div>
           <div className="nav-item">
-           <i class="fa fa-search text-white" onClick={()=>setShowSearch(true)}  aria-hidden="true"></i>
+           <i className="fa fa-search text-white" onClick={()=>setShowSearch(true)}  aria-hidden="true"></i>
           </div>
           <div className="nav-item dropdown-profile dropdown">
             <div className="img p-0">
-              <img src={defaultUserImage} alt="imageuser" class="dropdown-toggle" href="#" data-toggle="dropdown"/>
+              <img src={defaultUserImage} alt="imageuser" className="dropdown-toggle" href="#" data-toggle="dropdown"/>
             </div>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+            <ul className="dropdown-menu">
+              <li><Link to="" className="dropdown-item"> Submenu item 1</Link></li>
+              <li><Link to="" className="dropdown-item"> Submenu item 2 </Link></li>
 	          </ul>
           </div>
           </div>}

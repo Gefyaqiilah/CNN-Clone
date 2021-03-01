@@ -8,9 +8,9 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <App />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 
