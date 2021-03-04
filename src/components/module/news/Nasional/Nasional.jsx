@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 import './Nasional.scoped.css'
 import AllPopularNews from '../../../base/all-popular-news/AllPopularNews'
 import Video from '../../../base/video/video'
+import {Helmet} from 'react-helmet'
 
 class Nasional extends Component {
     state = {
@@ -25,6 +26,10 @@ class Nasional extends Component {
     render() {
         return (
             <div>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>CNN Indonesia | Berita Terikini Nasional</title>
+                </Helmet>
                 <div className="container nasional-container pt-5 d-flex">
                     <div className="row">
                         <div className="col-lg-8">

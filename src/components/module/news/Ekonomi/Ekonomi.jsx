@@ -5,6 +5,7 @@ import ImageGallery from '../../../base/image-gallery/ImageGallery'
 import ListNewsUpdate from '../../../base/list-news-update/ListNewsUpdate'
 import NewsUpdate from '../../../base/news-update/NewsUpdate'
 import {Link} from 'react-router-dom'
+import {Helmet} from 'react-helmet'
 import './Ekonomi.scope.css'
 
 class Ekonomi extends Component {
@@ -20,6 +21,10 @@ class Ekonomi extends Component {
     render() {
         return (
             <div>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>CNN Indonesia | Berita Terikini Ekonomi</title>
+                </Helmet>
                 <div className="container internasional-container pt-5 d-flex">
                     <div className="row">
                         <div className="col-lg-8">
