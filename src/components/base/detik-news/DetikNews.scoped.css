@@ -1,0 +1,28 @@
+.detik-news {
+  border-top: 3px solid #1B6292;
+}
+.news-item {
+  padding:0 0 10px 0;
+  border-bottom:1px solid #E5E5E5;
+  height:max-content;
+  margin:0 0 10px 0;
+}
+.logo {
+  width:115px;
+  height:42px;
+}
+.logo img {
+  width:100%;
+  height:100%;
+  object-fit: contain;
+}
+
+.news-img {
+  width:100%;
+  height:100%;
+}
+.news-img img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
