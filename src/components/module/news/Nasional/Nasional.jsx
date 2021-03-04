@@ -31,7 +31,7 @@ class Nasional extends Component {
                                 <div className="news-header">
                                     <div className="headline">
                                         <div className="headline-title d-flex">
-                                            <Link to="/news/nasional"><h4>NASIONAL</h4></Link>
+                                            <Link to="/nasional"><h4>NASIONAL</h4></Link>
                                             <div className="headline-title-child d-flex pl-3 pt-1 pb-3">
                                                 <Link to=""><h5>Politik</h5></Link>
                                                 <Link to=""><h5>Hukum & Kriminal</h5></Link>

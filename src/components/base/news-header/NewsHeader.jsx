@@ -1,6 +1,4 @@
 import './NewsHeader.scoped.css'
-import imgHeadline from '../../../assets/example-headline.jpeg'
-import imgNews1 from '../../../assets/news-update1.jpeg'
 import React, { useState, useEffect } from 'react'
 import moment from 'moment'
 
