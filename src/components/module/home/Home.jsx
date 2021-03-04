@@ -18,6 +18,8 @@ function Home () {
   const [newsUpdateBackground, setNewsUpdateBackground] = useState("")
   const [newsUpdateTitleColor, setNewsUpdateTitleColor] = useState("")
   const [newsUpdateSubTitleColor, setNewsUpdateSubTitleColor] = useState("")
+  const [judulGallery, setJudulGallery] = useState("")
+  const [subTitleGallery, setSubTitleGallery] = useState("")
   const initArticles = {
     all: [],
     nasional: [],
@@ -36,6 +38,8 @@ function Home () {
     setNewsUpdateBackground("#F2F4F5")
     setNewsUpdateTitleColor("#444444")
     setNewsUpdateSubTitleColor("#CC0000")
+    setJudulGallery("GALERI FOTO")
+    setSubTitleGallery("Nasional")
   }
   const getDataFromApi = async () => {
     try {
@@ -125,7 +129,7 @@ function Home () {
             <ListNewsUpdate/>
           </div>
           <div className="gap-component-content">
-            <ImageGallery/>
+            <ImageGallery judul={judulGallery} subTitle={subTitleGallery} />
           </div>
         </div>
         <div className="main-right col-lg-4 p-3">
