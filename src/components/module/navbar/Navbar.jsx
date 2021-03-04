@@ -35,7 +35,7 @@ function Navbar () {
               <Link to="/olahraga" className="text-gray th-red td-none">Olahraga</Link>
             </div>
             <div className="nav-item">
-              <Link to="" className="text-gray th-red td-none">Teknologi</Link>
+              <Link to="/teknologi" className="text-gray th-red td-none">Teknologi</Link>
             </div>
             <div className="nav-item">
               <Link to="" className="text-gray th-red td-none">Hiburan</Link>

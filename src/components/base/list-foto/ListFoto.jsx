@@ -1,7 +1,7 @@
 import React from 'react'
 import './ListFoto.scope.css'
 
-function ListFoto() {
+function ListFoto(props) {
     return (
         <div>
             <div className="list-foto">
@@ -18,21 +18,21 @@ function ListFoto() {
                             <img src="https://akcdn.detik.net.id/visual/2021/03/04/barcelona-vs-sevilla-1_169.jpeg?w=650&q=90" alt=""/>
                         </div>
                         <p className="text-16 bold-600 text-white pl-3 pr-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, pariatur?</p>
-                        <p className="text-14 bold-400 text-white pl-3 pb-2"><span className="text-16 bold-600 text-gold">Olahraga</span> 1 Jam yang lalu</p>
+                        <p className="text-14 bold-400 text-white pl-3 pb-2"><span className="text-16 bold-600 text-gold">{props.subTitle}</span> 1 Jam yang lalu</p>
                     </div>
                     <div className="content">
                         <div className="content-image pt-2 pl-3 pb-2">
                             <img src="https://akcdn.detik.net.id/visual/2021/03/04/barcelona-vs-sevilla-1_169.jpeg?w=650&q=90" alt=""/>
                         </div>
                         <p className="text-16 bold-600 text-white pl-3 pr-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, pariatur?</p>
-                        <p className="text-14 bold-400 text-white pl-3 pb-2"><span className="text-16 bold-600 text-gold">Olahraga</span> 1 Jam yang lalu</p>
+                        <p className="text-14 bold-400 text-white pl-3 pb-2"><span className="text-16 bold-600 text-gold">{props.subTitle}</span> 1 Jam yang lalu</p>
                     </div>
                     <div className="content">
                         <div className="content-image pt-2 pl-3 pb-2">
                             <img src="https://akcdn.detik.net.id/visual/2021/03/04/barcelona-vs-sevilla-1_169.jpeg?w=650&q=90" alt=""/>
                         </div>
                         <p className="text-16 bold-600 text-white pl-3 pr-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, pariatur?</p>
-                        <p className="text-14 bold-400 text-white pl-3 pb-2"><span className="text-16 bold-600 text-gold">Olahraga</span> 1 Jam yang lalu</p>
+                        <p className="text-14 bold-400 text-white pl-3 pb-2"><span className="text-16 bold-600 text-gold">{props.subTitle}</span> 1 Jam yang lalu</p>
                     </div>
                 </div>
             </div>

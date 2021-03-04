@@ -33,7 +33,3 @@
 .news-item .img:hover img:before, .news-item .img:focus img:before {
   display: block;
 }
-
-.news-item:hover .title {
-  color:#CC0000 !important;
-}
