@@ -6,7 +6,10 @@ function NewsUpdate (props) {
   return (
     <div className="news-update p-3" style={{background: props.background}}>
       <div className="title d-flex justify-content-between">
-        <p className="text-16 bold-600" style={{color: props.titleColor}}>{props.title}</p>
+        <div className="title-header">
+          <p className="text-16 m-0 bold-600" style={{color: props.titleColor}}>{props.title}</p>
+          <div className="line"></div>
+        </div>
         <p className="text-16 bold-600" style={{color: props.titleColor}}>LIHAT SEMUA</p>
       </div>
       <div className="news-list row">
@@ -16,7 +19,7 @@ function NewsUpdate (props) {
           </div>
           <div className="detail">
             <p className="title text-13 bold-600 m-0" style={{color: props.titleColor}}>Laporan Interaktif</p>
-            <p className="category text-12 bold-600" style={{color: props.subTitleColor}}>Nasional</p>
+            <p className="category text-12 bold-600" style={{color: props.subTitleColor}}>{props.subTitle}</p>
           </div>
         </div>
         <div className="news-item col-lg-4">
@@ -25,7 +28,7 @@ function NewsUpdate (props) {
           </div>
           <div className="detail">
             <p className="title text-13 bold-600 m-0" style={{color: props.titleColor}}>Laporan Interaktif</p>
-            <p className="category text-12 bold-600" style={{color: props.subTitleColor}}>Nasional</p>
+            <p className="category text-12 bold-600" style={{color: props.subTitleColor}}>{props.subTitle}</p>
           </div>
         </div>
         <div className="news-item col-lg-4">
@@ -34,7 +37,7 @@ function NewsUpdate (props) {
           </div>
           <div className="detail">
             <p className="title text-13 bold-600 m-0" style={{color: props.titleColor}}>Laporan Interaktif</p>
-            <p className="category text-12 bold-600" style={{color: props.subTitleColor}}>Nasional</p>
+            <p className="category text-12 bold-600" style={{color: props.subTitleColor}}>{props.subTitle}</p>
           </div>
         </div>
       </div>

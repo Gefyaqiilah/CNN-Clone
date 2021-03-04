@@ -18,7 +18,8 @@ class Nasional extends Component {
         newsUpdateTitleColor: "#444444",
         suaraArusBawahTitleColor: "#FFFFFF",
         newsUpdateSubTitleColor: "#CC0000",
-        suaraArusBawahSubTitleColor: "#F5A623"
+        suaraArusBawahSubTitleColor: "#F5A623",
+        subTitle: "Nasional"
     }
     
     render() {
@@ -51,16 +52,16 @@ class Nasional extends Component {
                                 </div>
                             </div>
                             <div className="gap-component mb-5">
-                                <NewsUpdate title={this.state.newsUpdateTitle} background={this.state.newsUpdateBackground} titleColor={this.state.newsUpdateTitleColor} subTitleColor={this.state.newsUpdateSubTitleColor} /> 
+                                <NewsUpdate title={this.state.newsUpdateTitle} background={this.state.newsUpdateBackground} titleColor={this.state.newsUpdateTitleColor} subTitleColor={this.state.newsUpdateSubTitleColor} subTitle={this.state.subTitle} /> 
                             </div>
                             <div className="gap-component mb-5">
                                 <ListNewsUpdate />
                             </div>
                             <div className="gap-component mb-5">
-                                <NewsUpdate title={this.state.suaraArusBawahTitle} background={this.state.suaraArusBawahBackground} titleColor={this.state.suaraArusBawahTitleColor} subTitleColor={this.state.suaraArusBawahSubTitleColor} /> 
+                                <NewsUpdate title={this.state.suaraArusBawahTitle} background={this.state.suaraArusBawahBackground} titleColor={this.state.suaraArusBawahTitleColor} subTitleColor={this.state.suaraArusBawahSubTitleColor} subTitle={this.state.subTitle} /> 
                             </div>
                             <div className="gap-component mb-5">
-                                <NewsUpdate title={this.state.analisisTitle} background={this.state.newsUpdateBackground} titleColor={this.state.newsUpdateTitleColor} subTitleColor={this.state.newsUpdateSubTitleColor} /> 
+                                <NewsUpdate title={this.state.analisisTitle} background={this.state.newsUpdateBackground} titleColor={this.state.newsUpdateTitleColor} subTitleColor={this.state.newsUpdateSubTitleColor} subTitle={this.state.subTitle} /> 
                             </div>
                             <div className="gap-component mb-5">
                                 <Video />
