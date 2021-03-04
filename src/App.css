@@ -79,3 +79,6 @@
 .text-blue {
   color:#1B6292 !important;
 }
+.text-capitalize {
+  text-transform: capitalize !important;
+}

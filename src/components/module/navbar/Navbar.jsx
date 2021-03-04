@@ -23,7 +23,7 @@ function Navbar () {
               <Link to="" className="text-gray th-red td-none">Home</Link>
             </div>
             <div className="nav-item">
-              <Link to="/news/nasional" className="text-gray th-red td-none">Nasional</Link>
+              <Link to="/nasional" className="text-gray th-red td-none">Nasional</Link>
             </div>
             <div className="nav-item">
               <Link to="" className="text-gray th-red td-none">Internasional</Link>

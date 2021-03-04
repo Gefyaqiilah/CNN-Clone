@@ -13,8 +13,7 @@ export default function Routes () {
       <Navbar/>
       <Switch>
         <Route path="/" exact component={Home}/>
-        <Route path="/news" exact component={News}/>
-        <Route path="/news/nasional" exact component={Nasional}/>
+        <Route path="/nasional" component={Nasional}/>
       </Switch>
       <Footer/>
     </Router>
