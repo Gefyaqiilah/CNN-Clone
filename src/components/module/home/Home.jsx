@@ -10,14 +10,26 @@ import NewsReviews from '../../base/news-reviews/NewsReviews'
 import AllPopularNews from '../../base/all-popular-news/AllPopularNews'
 import ImageGallery from '../../base/image-gallery/ImageGallery'
 import CNBCNews from '../../base/cnbc-news/CNBCNews'
-import DetikNews from '../../base/detik-news/DetikNews'
-
+import DetikNews from '../../base/detik-news/DetikNews' 
+import axios from 'axios'
 function Home () {
 
   const [newsUpdateTitle, setNewsUpdateTitle] = useState("")
   const [newsUpdateBackground, setNewsUpdateBackground] = useState("")
   const [newsUpdateTitleColor, setNewsUpdateTitleColor] = useState("")
   const [newsUpdateSubTitleColor, setNewsUpdateSubTitleColor] = useState("")
+  const initArticles = {
+    all: [],
+    nasional: [],
+    internasional: [],
+    ekonomi: [],
+    olahraga: [],
+    teknologi: [],
+    hiburan: [],
+    gayaHidup: []
+  }
+  const [articles, setArticles] = useState(initArticles)
+  const [allCategory, setAllCategory] = useState([])
 
   const change = () => {
     setNewsUpdateTitle("BERITA DAERAH TERBARU")
@@ -25,18 +37,81 @@ function Home () {
     setNewsUpdateTitleColor("#444444")
     setNewsUpdateSubTitleColor("#CC0000")
   }
+  const getDataFromApi = async () => {
+    try {
+      const all = await axios.get(`${process.env.REACT_APP_CNN_API}`)
+      const nasional = await axios.get(`${process.env.REACT_APP_CNN_API}/nasional`)
+      const internasional = await axios.get(`${process.env.REACT_APP_CNN_API}/internasional`)
+      const ekonomi = await axios.get(`${process.env.REACT_APP_CNN_API}/ekonomi`)
+      const olahraga = await axios.get(`${process.env.REACT_APP_CNN_API}/olahraga`)
+      const teknologi = await axios.get(`${process.env.REACT_APP_CNN_API}/teknologi`)
+      const hiburan = await axios.get(`${process.env.REACT_APP_CNN_API}/hiburan`)
+      const gayaHidup = await axios.get(`${process.env.REACT_APP_CNN_API}/gaya-hidup`)
+      setArticles((prevState) => {
+        return({
+          ...prevState,
+          all:all.data.data,
+          nasional:nasional.data.data,
+          internasional:internasional.data.data,
+          ekonomi:ekonomi.data.data,
+          olahraga:olahraga.data.data,
+          teknologi:teknologi.data.data,
+          hiburan:hiburan.data.data,
+          gayaHidup: gayaHidup.data.data
+        })
+      })
+      setAllCategory([
+        {
+          ...ekonomi.data.data[0],
+          category: 'ekonomi'
+        },
+        {
+          ...nasional.data.data[0],
+          category: 'nasional'
+        },
+        {
+          ...internasional.data.data[0],
+          category: 'internasional'
+        },
+        {
+          ...olahraga.data.data[0],
+          category: 'olahraga'
+        },
+        {
+          ...teknologi.data.data[0],
+          category: 'teknologi'
+        },
+        {
+          ...hiburan.data.data[0],
+          category: 'hiburan'
+        },
+        {
+          ...gayaHidup.data.data[0],
+          category: 'gaya hidup'
+        }
+      ])
+    } catch (error) {
+      alert('server error')
+    }
+  }
 
   useEffect(() => {
     change()
+    getDataFromApi()
   }, [])
+
+  useEffect(()=> {
+    console.log('articles :>> ', articles);
+  }, [articles])
+
   
   return (
     <div className="container home-container pt-5">
       <div className="gap-component">
-        <NewsHeader/>
+        <NewsHeader articles={articles.all} byCategory={allCategory}/>
       </div>
       <div className="gap-component">
-        <HeadLines/>
+        <HeadLines articles={articles.all}/>
       </div>
       <div id="main-content" className="row p-0 gap-component">
         <div className="main-left col-lg-8 p-3">
