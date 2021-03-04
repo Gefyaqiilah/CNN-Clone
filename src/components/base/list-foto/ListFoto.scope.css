@@ -1,0 +1,19 @@
+.list-foto {
+    height: max-content;
+    background: #444444;
+}
+
+.list-foto .title-header .line {
+    width:50px;
+    border:1px solid red;
+}
+
+.list-foto .list-content-image .content .content-image img {
+    width: 315px;
+    height: auto;
+    object-fit: contain;
+}
+
+.list-foto .list-content-image .content p {
+    margin-bottom: 0px;
+}

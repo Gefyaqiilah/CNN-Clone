@@ -32,7 +32,7 @@ function Navbar () {
               <Link to="/ekonomi" className="text-gray th-red td-none">Ekonomi</Link>
             </div>
             <div className="nav-item">
-              <Link to="" className="text-gray th-red td-none">Olahraga</Link>
+              <Link to="/olahraga" className="text-gray th-red td-none">Olahraga</Link>
             </div>
             <div className="nav-item">
               <Link to="" className="text-gray th-red td-none">Teknologi</Link>
