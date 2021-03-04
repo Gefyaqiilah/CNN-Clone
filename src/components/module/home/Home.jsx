@@ -10,6 +10,7 @@ import NewsReviews from '../../base/news-reviews/NewsReviews'
 import AllPopularNews from '../../base/all-popular-news/AllPopularNews'
 import ImageGallery from '../../base/image-gallery/ImageGallery'
 import CNBCNews from '../../base/cnbc-news/CNBCNews'
+import DetikNews from '../../base/detik-news/DetikNews'
 
 function Home () {
 
@@ -64,6 +65,9 @@ function Home () {
           </div>
           <div className="gap-component-content-right">
             <CNBCNews/>
+          </div>
+          <div className="gap-component-content-right">
+            <DetikNews/>
           </div>
         </div>
       </div>
