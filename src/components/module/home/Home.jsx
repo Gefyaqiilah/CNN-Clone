@@ -60,42 +60,43 @@ function Home () {
           gayaHidup: gayaHidup.data.data
         })
       })
-
+      let containerNewsCategory = []
       for (let i=0; i<=4; i++) {
-        setAllCategory((prevState)=> {
-          return([
-            ...prevState,
-            {
-              ...ekonomi.data.data[i],
-              category: 'ekonomi'
-            },
-            {
-              ...nasional.data.data[i],
-              category: 'nasional'
-            },
-            {
-              ...internasional.data.data[i],
-              category: 'internasional'
-            },
-            {
-              ...olahraga.data.data[i],
-              category: 'olahraga'
-            },
-            {
-              ...teknologi.data.data[i],
-              category: 'teknologi'
-            },
-            {
-              ...hiburan.data.data[i],
-              category: 'hiburan'
-            },
-            {
-              ...gayaHidup.data.data[i],
-              category: 'gaya hidup'
-            }
-          ])
+        containerNewsCategory.push({
+          ...ekonomi.data.data[i],
+          category: 'ekonomi'
+        },
+        {
+          ...nasional.data.data[i],
+          category: 'nasional'
+        },
+        {
+          ...internasional.data.data[i],
+          category: 'internasional'
+        },
+        {
+          ...olahraga.data.data[i],
+          category: 'olahraga'
+        },
+        {
+          ...teknologi.data.data[i],
+          category: 'teknologi'
+        },
+        {
+          ...hiburan.data.data[i],
+          category: 'hiburan'
+        },
+        {
+          ...gayaHidup.data.data[i],
+          category: 'gaya hidup'
         })
       }
+      setAllCategory((prevState) => {
+        return([
+          ...prevState,
+          ...containerNewsCategory
+        ])
+      })
       
     } catch (error) {
       alert('server error')
@@ -129,13 +130,13 @@ function Home () {
            <LaporanInteraktif articlesByCategory={allCategory} title={newsUpdateTitle} background={newsUpdateBackground} titleColor={newsUpdateTitleColor} subTitleColor={newsUpdateSubTitleColor} /> 
           </div>
           <div className="gap-component-content">
-            <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i<=4)}/>
+            <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i<4)}/>
           </div>
           <div className="gap-component-content">
             <ImageGallery/>
           </div>
           <div className="gap-component-content">
-          <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i>4&&i<9)}/>
+            <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i<4)}/>
           </div>
         </div>
         <div className="main-right col-lg-4 p-3">

@@ -3,6 +3,10 @@
   height:max-content;
   border:1px solid #E3E8EB;
 }
+.news-update .title-header .line {
+  width:50px;
+  border:1px solid red;
+}
 .news-item .img{
   width:100%;
   height:70%;
@@ -28,8 +32,4 @@
 }
 .news-item .img:hover img:before, .news-item .img:focus img:before {
   display: block;
-}
-
-.news-item:hover .title {
-  color:#CC0000 !important;
 }

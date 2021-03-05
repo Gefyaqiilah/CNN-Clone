@@ -1,0 +1,16 @@
+.infografis {
+    background: #333333;
+    height: max-content;
+}
+
+.infografis .title-header .line {
+    width:50px;
+    border:1px solid red;
+}
+
+.infografis .infografis-content .infografis-image img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    padding: 0px 0px 20px 10px;
+}

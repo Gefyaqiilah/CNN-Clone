@@ -1,6 +1,9 @@
 .list-news-update {
   height:max-content;
 }
+.news-update {
+  background: #FFFFFF;
+}
 .news-update .img {
   width:100%;
   height:100%;

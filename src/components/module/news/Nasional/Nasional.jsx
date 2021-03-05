@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 import './Nasional.scoped.css'
 import AllPopularNews from '../../../base/all-popular-news/AllPopularNews'
 import Video from '../../../base/video/video'
+import {Helmet} from 'react-helmet'
 
 class Nasional extends Component {
     state = {
@@ -18,12 +19,17 @@ class Nasional extends Component {
         newsUpdateTitleColor: "#444444",
         suaraArusBawahTitleColor: "#FFFFFF",
         newsUpdateSubTitleColor: "#CC0000",
-        suaraArusBawahSubTitleColor: "#F5A623"
+        suaraArusBawahSubTitleColor: "#F5A623",
+        subTitle: "Nasional"
     }
     
     render() {
         return (
             <div>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>CNN Indonesia | Berita Terikini Nasional</title>
+                </Helmet>
                 <div className="container nasional-container pt-5 d-flex">
                     <div className="row">
                         <div className="col-lg-8">
@@ -31,7 +37,7 @@ class Nasional extends Component {
                                 <div className="news-header">
                                     <div className="headline">
                                         <div className="headline-title d-flex">
-                                            <Link to="/news/nasional"><h4>NASIONAL</h4></Link>
+                                            <Link to="/nasional"><h4>NASIONAL</h4></Link>
                                             <div className="headline-title-child d-flex pl-3 pt-1 pb-3">
                                                 <Link to=""><h5>Politik</h5></Link>
                                                 <Link to=""><h5>Hukum & Kriminal</h5></Link>
@@ -51,16 +57,16 @@ class Nasional extends Component {
                                 </div>
                             </div>
                             <div className="gap-component mb-5">
-                                <NewsUpdate title={this.state.newsUpdateTitle} background={this.state.newsUpdateBackground} titleColor={this.state.newsUpdateTitleColor} subTitleColor={this.state.newsUpdateSubTitleColor} /> 
+                                <NewsUpdate title={this.state.newsUpdateTitle} background={this.state.newsUpdateBackground} titleColor={this.state.newsUpdateTitleColor} subTitleColor={this.state.newsUpdateSubTitleColor} subTitle={this.state.subTitle} /> 
                             </div>
                             <div className="gap-component mb-5">
                                 <ListNewsUpdate />
                             </div>
                             <div className="gap-component mb-5">
-                                <NewsUpdate title={this.state.suaraArusBawahTitle} background={this.state.suaraArusBawahBackground} titleColor={this.state.suaraArusBawahTitleColor} subTitleColor={this.state.suaraArusBawahSubTitleColor} /> 
+                                <NewsUpdate title={this.state.suaraArusBawahTitle} background={this.state.suaraArusBawahBackground} titleColor={this.state.suaraArusBawahTitleColor} subTitleColor={this.state.suaraArusBawahSubTitleColor} subTitle={this.state.subTitle} /> 
                             </div>
                             <div className="gap-component mb-5">
-                                <NewsUpdate title={this.state.analisisTitle} background={this.state.newsUpdateBackground} titleColor={this.state.newsUpdateTitleColor} subTitleColor={this.state.newsUpdateSubTitleColor} /> 
+                                <NewsUpdate title={this.state.analisisTitle} background={this.state.newsUpdateBackground} titleColor={this.state.newsUpdateTitleColor} subTitleColor={this.state.newsUpdateSubTitleColor} subTitle={this.state.subTitle} /> 
                             </div>
                             <div className="gap-component mb-5">
                                 <Video />

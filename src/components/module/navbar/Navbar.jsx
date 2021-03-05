@@ -26,16 +26,16 @@ function Navbar () {
               <Link to="/nasional" className="text-gray th-red td-none">Nasional</Link>
             </div>
             <div className="nav-item">
-              <Link to="" className="text-gray th-red td-none">Internasional</Link>
+              <Link to="/internasional" className="text-gray th-red td-none">Internasional</Link>
             </div>
             <div className="nav-item">
-              <Link to="" className="text-gray th-red td-none">Ekonomi</Link>
+              <Link to="/ekonomi" className="text-gray th-red td-none">Ekonomi</Link>
             </div>
             <div className="nav-item">
-              <Link to="" className="text-gray th-red td-none">Olahraga</Link>
+              <Link to="/olahraga" className="text-gray th-red td-none">Olahraga</Link>
             </div>
             <div className="nav-item">
-              <Link to="" className="text-gray th-red td-none">Teknologi</Link>
+              <Link to="/teknologi" className="text-gray th-red td-none">Teknologi</Link>
             </div>
             <div className="nav-item">
               <Link to="" className="text-gray th-red td-none">Hiburan</Link>
