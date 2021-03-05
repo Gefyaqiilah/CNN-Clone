@@ -1,5 +1,6 @@
 import './ListNewsUpdate.scoped.css'
 import React, {useState, useEffect} from 'react'
+import moment from 'moment'
 
 function ListNewsUpdate (props) {
   const initArticles = {everyCategory: []}
@@ -14,6 +15,10 @@ function ListNewsUpdate (props) {
     })
   }, [props.articlesByCategory])
 
+  const convertTime = (isoDate) => {
+    return moment(isoDate).fromNow()
+  }
+
   if (articles.everyCategory.length === 0) {
     return(
       <p>Loading...</p>
@@ -27,7 +32,7 @@ function ListNewsUpdate (props) {
         </div>
         <div className="detail col-lg-8 d-flex flex-column justify-content-center">
           <p className="title text-20 bold-600">{value.title}</p>
-          <p className="information"><span className="text-red bold-600">{value.category}</span> {value.isoDate}</p>
+          <p className="information"><span className="text-red bold-600">{value.category}</span> {convertTime(value.isoDate)}</p>
         </div>
       </div>
       )

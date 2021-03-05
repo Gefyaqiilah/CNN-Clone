@@ -47,6 +47,7 @@ function Home () {
       const teknologi = await axios.get(`${process.env.REACT_APP_CNN_API}/teknologi`)
       const hiburan = await axios.get(`${process.env.REACT_APP_CNN_API}/hiburan`)
       const gayaHidup = await axios.get(`${process.env.REACT_APP_CNN_API}/gaya-hidup`)
+      
       setArticles((prevState) => {
         return({
           ...prevState,
@@ -129,13 +130,13 @@ function Home () {
            <LaporanInteraktif articlesByCategory={allCategory} title={newsUpdateTitle} background={newsUpdateBackground} titleColor={newsUpdateTitleColor} subTitleColor={newsUpdateSubTitleColor} /> 
           </div>
           <div className="gap-component-content">
-            <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i<4)}/>
+            <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i<=3)}/>
           </div>
           <div className="gap-component-content">
             <ImageGallery/>
           </div>
           <div className="gap-component-content">
-            <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i<4)}/>
+            <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i>=4 && i<=8)}/>
           </div>
         </div>
         <div className="main-right col-lg-4 p-3">
