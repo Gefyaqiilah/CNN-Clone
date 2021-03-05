@@ -1,5 +1,4 @@
 import './NewsUpdate.scoped.css'
-import imgExample from '../../../assets/example-headline.jpeg'
 import React, {useState, useEffect} from 'react'
 
 function NewsUpdate (props) {
@@ -13,7 +12,6 @@ function NewsUpdate (props) {
         everyCategory: props.articlesByCategory
       })
     })
-    console.log('articles news update:>> ', articles);
   }, [props.articlesByCategory])
 
   if (articles.everyCategory.length === 0) {
