@@ -1,63 +1,62 @@
 import './HeadLines.scoped.css'
-import imgExample from '../../../assets/example-headline.jpeg'
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 function HeadLines (props) {
-  const [articles, setArticles] = useState([])
-  
-  useEffect(()=> {
-    setArticles(props.articles)
-  }, [props.articles, articles])
+  const initArticles = { topHeadlines: [] }
+  const [articles, setArticles] = useState(initArticles)
 
-  return (
-    <div className="headlines">
-      <div className="title d-flex justify-content-between">
-        <p className="text-15 bold-700 text-headline text-dark-gray">BERITA UTAMA</p>
+
+  const getTopHeadlines = async() => {
+    try {
+      const topHeadlines = await axios.get(`${process.env.REACT_APP_NEWS_API}`)
+      setArticles((prevState) => {
+        return({
+          ...prevState,
+          topHeadlines: topHeadlines.data.articles
+        })
+      })
+      console.log('articles :>> ', articles);
+    } catch (error) {
+      alert('server error')
+    }
+  }
+
+  useEffect(() => {
+    getTopHeadlines()
+  }, [])
+
+  if (articles.topHeadlines.length === 0) {
+    return(
+      <p>Loading...</p>
+    )
+  } else {
+    const headlineItem = articles.topHeadlines.map((value, index) => {
+      if (index < 5) {
+        return(
+          <div className="headline-item mr-3" key={value.publishedAt}>
+            <div className="headline-image">
+              <img src={value.urlToImage} alt=""/>
+            </div>
+            <div className="headline-title">
+              <p className="bold-600 text-13 text-dark-gray">{value.title}</p>
+            </div>
+          </div>
+        )
+      }
+    })
+    return (
+      <div className="headlines">
+        <div className="title d-flex justify-content-between">
+          <p className="text-15 bold-700 text-headline text-dark-gray">BERITA UTAMA</p>
+        </div>
+        <div className="list-headlines d-flex justify-content-end">
+          {headlineItem}
+        </div>
       </div>
-      <div className="list-headlines d-flex justify-content-end">
-        <div className="headline-item mr-3">
-          <div className="headline-image">
-            <img src={articles} alt=""/>
-          </div>
-          <div className="headline-title">
-            <p className="bold-600 text-13 text-dark-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nulla expedita magni commodi accusantium pariatur!</p>
-          </div>
-        </div>
-        <div className="headline-item mr-3">
-          <div className="headline-image">
-            <img src={imgExample} alt=""/>
-          </div>
-          <div className="headline-title">
-            <p className="bold-600 text-13 text-dark-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nulla expedita magni commodi accusantium pariatur!</p>
-          </div>
-        </div>
-        <div className="headline-item mr-3">
-          <div className="headline-image">
-            <img src={imgExample} alt=""/>
-          </div>
-          <div className="headline-title">
-            <p className="bold-600 text-13 text-dark-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nulla expedita magni commodi accusantium pariatur!</p>
-          </div>
-        </div>
-        <div className="headline-item mr-3">
-          <div className="headline-image">
-            <img src={imgExample} alt=""/>
-          </div>
-          <div className="headline-title">
-            <p className="bold-600 text-13 text-dark-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nulla expedita magni commodi accusantium pariatur!</p>
-          </div>
-        </div>
-        <div className="headline-item mr-3">
-          <div className="headline-image">
-            <img src={imgExample} alt=""/>
-          </div>
-          <div className="headline-title">
-            <p className="bold-600 text-13 text-dark-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nulla expedita magni commodi accusantium pariatur!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+    )
+  }
+  
 }
 
 export default HeadLines

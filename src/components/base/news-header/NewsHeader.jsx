@@ -1,6 +1,4 @@
 import './NewsHeader.scoped.css'
-import imgHeadline from '../../../assets/example-headline.jpeg'
-import imgNews1 from '../../../assets/news-update1.jpeg'
 import React, { useState, useEffect } from 'react'
 import moment from 'moment'
 
@@ -30,9 +28,9 @@ function NewsHeader (props) {
   }
 
   if (articles.length > 0 && everyCategory.length > 0) {
-    const newsItem = everyCategory.map((value) => {
+    const newsItem = everyCategory.map((value, index) => {
       return(
-      <div className="news-item p-0 d-flex" key={value.isoDate}>
+      <div className="news-item p-0 d-flex" key={index}>
         <div className="img">
           <img src={value.image.small} alt=""/>
         </div>

@@ -32,7 +32,7 @@ function Home () {
   const [allCategory, setAllCategory] = useState([])
 
   const change = () => {
-    setNewsUpdateTitle("BERITA DAERAH TERBARU")
+    setNewsUpdateTitle("LAPORAN INTERAKTIF")
     setNewsUpdateBackground("#F2F4F5")
     setNewsUpdateTitleColor("#444444")
     setNewsUpdateSubTitleColor("#CC0000")
@@ -60,36 +60,43 @@ function Home () {
           gayaHidup: gayaHidup.data.data
         })
       })
-      setAllCategory([
-        {
-          ...ekonomi.data.data[0],
-          category: 'ekonomi'
-        },
-        {
-          ...nasional.data.data[0],
-          category: 'nasional'
-        },
-        {
-          ...internasional.data.data[0],
-          category: 'internasional'
-        },
-        {
-          ...olahraga.data.data[0],
-          category: 'olahraga'
-        },
-        {
-          ...teknologi.data.data[0],
-          category: 'teknologi'
-        },
-        {
-          ...hiburan.data.data[0],
-          category: 'hiburan'
-        },
-        {
-          ...gayaHidup.data.data[0],
-          category: 'gaya hidup'
-        }
-      ])
+
+      for (let i=0; i<=4; i++) {
+        setAllCategory((prevState)=> {
+          return([
+            ...prevState,
+            {
+              ...ekonomi.data.data[i],
+              category: 'ekonomi'
+            },
+            {
+              ...nasional.data.data[i],
+              category: 'nasional'
+            },
+            {
+              ...internasional.data.data[i],
+              category: 'internasional'
+            },
+            {
+              ...olahraga.data.data[i],
+              category: 'olahraga'
+            },
+            {
+              ...teknologi.data.data[i],
+              category: 'teknologi'
+            },
+            {
+              ...hiburan.data.data[i],
+              category: 'hiburan'
+            },
+            {
+              ...gayaHidup.data.data[i],
+              category: 'gaya hidup'
+            }
+          ])
+        })
+      }
+      
     } catch (error) {
       alert('server error')
     }
@@ -119,13 +126,16 @@ function Home () {
             <NewsCovid/> 
           </div>
           <div className="gap-component-content">
-           <LaporanInteraktif title={newsUpdateTitle} background={newsUpdateBackground} titleColor={newsUpdateTitleColor} subTitleColor={newsUpdateSubTitleColor} /> 
+           <LaporanInteraktif articlesByCategory={allCategory} title={newsUpdateTitle} background={newsUpdateBackground} titleColor={newsUpdateTitleColor} subTitleColor={newsUpdateSubTitleColor} /> 
           </div>
           <div className="gap-component-content">
-            <ListNewsUpdate/>
+            <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i<=4)}/>
           </div>
           <div className="gap-component-content">
             <ImageGallery/>
+          </div>
+          <div className="gap-component-content">
+          <ListNewsUpdate articlesByCategory={allCategory.filter((v,i)=> i>4&&i<9)}/>
           </div>
         </div>
         <div className="main-right col-lg-4 p-3">
