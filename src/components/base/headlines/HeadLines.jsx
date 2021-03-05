@@ -6,7 +6,6 @@ function HeadLines (props) {
   const initArticles = { topHeadlines: [] }
   const [articles, setArticles] = useState(initArticles)
 
-
   const getTopHeadlines = async() => {
     try {
       const topHeadlines = await axios.get(`${process.env.REACT_APP_NEWS_API}`)
@@ -34,7 +33,7 @@ function HeadLines (props) {
     const headlineItem = articles.topHeadlines.map((value, index) => {
       if (index < 5) {
         return(
-          <div className="headline-item mr-3" key={value.publishedAt}>
+          <div className="headline-item mr-3 col-xs-2" key={value.publishedAt}>
             <div className="headline-image">
               <img src={value.urlToImage} alt=""/>
             </div>
@@ -50,7 +49,7 @@ function HeadLines (props) {
         <div className="title d-flex justify-content-between">
           <p className="text-15 bold-700 text-headline text-dark-gray">BERITA UTAMA</p>
         </div>
-        <div className="list-headlines d-flex justify-content-end">
+        <div className="list-headlines row d-flex justify-content-center">
           {headlineItem}
         </div>
       </div>

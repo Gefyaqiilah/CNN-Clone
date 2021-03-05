@@ -28,3 +28,7 @@
 .headline-image:hover img:before, .headline-image:focus img:before {
   display: block;
 }
+.headline-item {
+  width:200px;
+  height:max-content;
+}

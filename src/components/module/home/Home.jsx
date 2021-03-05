@@ -112,11 +112,10 @@ function Home () {
     console.log('articles :>> ', articles);
   }, [articles])
 
-  
   return (
     <div className="container home-container pt-5">
       <div className="gap-component">
-        <NewsHeader articles={articles.all} byCategory={allCategory}/>
+        <NewsHeader articles={articles.all} byCategory={allCategory.filter((el, i)=> i<6)}/>
       </div>
       <div className="gap-component">
         <HeadLines articles={articles.all}/>
